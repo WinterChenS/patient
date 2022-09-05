@@ -6,6 +6,7 @@ import services from '@/services/patient';
 import type { RcFile, UploadFile, UploadProps } from 'antd/es/upload/interface';
 import type { UploadChangeParam } from 'antd/es/upload';
 import moment from 'moment';
+import { history } from 'umi';
 
 const { addPatient, uploadPatientPhoto } = services.PatientController;
 
@@ -63,7 +64,7 @@ const validateMessages = {
 };
 /* eslint-enable no-template-curly-in-string */
 
-const App = () => {
+const PatientForm = () => {
 
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState<string>();
@@ -76,7 +77,8 @@ const App = () => {
       await addPatient({ ...fields.user });
       hide();
       message.success('add success');
-      return true;
+
+      history.push('/success');
     } catch (error) {
       hide();
       message.error('add failed');
@@ -129,6 +131,7 @@ const App = () => {
   );
 
 
+
   return (
     <Form {...layout} name="nest-messages"
       labelCol={{ span: 4 }}
@@ -177,8 +180,7 @@ const App = () => {
           listType="picture-card"
           className="avatar-uploader"
           showUploadList={false}
-          // beforeUpload={beforeUpload}
-          // onChange={handleChange}
+          beforeUpload={beforeUpload}
           customRequest={uploadPhoto}
         >
           {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}
@@ -204,4 +206,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default PatientForm;

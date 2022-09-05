@@ -1,2 +1,3 @@
-import App from './Form';
-export default App;
+import PatientForm from './Form';
+export default PatientForm;
+

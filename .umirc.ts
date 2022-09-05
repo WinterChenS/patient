@@ -26,15 +26,20 @@ export default defineConfig({
       path: '/table',
       component: './Table',
     },
-  ],
-  proxy: {
-    // todo: 代理配置
-    '/api': {
-      target: 'http://localhost:8098/',
-      changeOrigin: true,
-      pathRewrite: { '^/api': '/api' },
+    {
+      title: " ",
+      path: "/success",
+      component: "./Success",
     },
-  },
+  ],
+  // proxy: {
+  //   // todo: 代理配置
+  //   '/api': {
+  //     target: 'http://localhost:8098/',
+  //     changeOrigin: true,
+  //     pathRewrite: { '^/api': '/api' },
+  //   },
+  // },
   npmClient: 'yarn',
   tailwindcss: {},
 });
