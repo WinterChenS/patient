@@ -1,3 +1,49 @@
-# README
+# Getting Started with Patient
 
-`@umijs/max` 模板项目，更多功能参考 [Umi Max 简介](https://next.umijs.org/zh-CN/docs/max/introduce)
+## Overview
+this is a simple patient management system. It is a simple application that allows you to create, read patients.
+
+visit the [demo](http://winterchen.com:3002)
+
+visit the back-end [repo](https://github.com/WinterChenS/patient-go.git)
+
+
+### home page
+
+![](./images/home.png)
+
+### table page
+
+![](./images/table.png)
+
+## Quick Start
+
+### check out the source code
+
+```bash
+git clone https://github.com/WinterChenS/patient.git
+```
+
+In the project directory, you can run:
+
+### `yarn`
+
+```bash
+yarn
+```
+
+### `yarn start`
+
+```bash
+yarn start
+```
+
+Runs the app in the development mode.\
+Open [http://localhost:8000](http://localhost:8000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `yarn build`
+
+Launches the test runner in the interactive watch mode.
