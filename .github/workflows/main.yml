@@ -72,4 +72,4 @@ jobs:
           # connection timeout to remote host
           connect_timeout: 180s # optional, default is 30s
           # execute commands on ssh
-          script: cd /tmp/ && unzip dist.zip && rm -rf /root/workspace/docker/nginx/html/patent/**  && mv dist/** /root/workspace/docker/nginx/html/patent/
+          script: cd /tmp/ && unzip dist.zip && rm -rf /root/workspace/docker/nginx/html/patient/**  && mv dist/** /root/workspace/docker/nginx/html/patient/ && rm -rf /tmp/dist.zip /tmp/dist 
