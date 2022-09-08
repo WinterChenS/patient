@@ -146,7 +146,7 @@ const PatientForm = () => {
           },
         ]}
       >
-        <Input />
+        <Input maxLength="35" />
       </Form.Item>
       <Form.Item
         name={['user', 'brithday']}
@@ -164,10 +164,10 @@ const PatientForm = () => {
         label="Phone Number"
         rules={[{ required: true, message: 'Please input your phone number!' }]}
       >
-        <Input />
+        <Input maxLength="20" />
       </Form.Item>
       <Form.Item name={['user', 'address']} label="Address">
-        <Input />
+        <Input maxLength="255" />
       </Form.Item>
       <Form.Item
         name={['user', 'photo']}
