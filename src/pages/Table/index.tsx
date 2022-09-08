@@ -40,6 +40,7 @@ const TableList: React.FC<unknown> = () => {
     {
       title: 'Address',
       dataIndex: 'address',
+      ellipsis: true,
       valueType: 'text',
     },
     {
@@ -79,10 +80,11 @@ const TableList: React.FC<unknown> = () => {
         title: 'Table of patient',
       }}
     >
-      <ProTable<API.UserInfo>
+      <ProTable<API.PatientInfo>
         headerTitle="Query Table"
         actionRef={actionRef}
         rowKey="id"
+
         search={false}
         // toolBarRender={() => [
         //   <Button
